@@ -1,0 +1,178 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    position: relative;
+    background: #333;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #77d62a 3px solid;
+    text-align: center;
+}
+
+header h1 {
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 24px;
+}
+
+header p {
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.theme-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.theme-button img {
+    width: 30px;
+    height: 30px;
+}
+
+main {
+    margin-top: 20px;
+}
+
+.resource {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: #e6e6e6 1px solid;
+    border-radius: 5px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.resource h2 {
+    margin-top: 0;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.link-button {
+    text-decoration: none;
+    color: #fff;
+    background-color: #77d62a;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.link-button:hover {
+    background-color: #ff6347;
+    transform: scale(1.05);
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+    border-top: #77d62a 3px solid;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #77d62a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #ff6347;
+}
+
+.github-logo {
+    width: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.gopher-container {
+    margin-top: 20px;
+}
+
+.gopher-container img {
+    width: 150px;
+    height: auto;
+}
+
+.dark-theme {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.dark-theme header {
+    background: #1e1e1e;
+    border-bottom: #ff6347 3px solid;
+}
+
+.dark-theme .resource {
+    background: #1e1e1e;
+    border: #333 1px solid;
+}
+
+.dark-theme .link-button {
+    background-color: #333;
+    color: #77d62a;
+}
+
+.dark-theme .link-button:hover {
+    background-color: #ff6347;
+    color: #fff;
+}
+
+.dark-theme .theme-button img {
+    filter: invert(1);
+}
+
+.dark-theme footer {
+    background: #1e1e1e;
+    border-top: #ff6347 3px solid;
+}
+
+.dark-theme footer a {
+    color: #77d62a;
+}
+
+.dark-theme footer a:hover {
+    color: #ff6347;
+}
+
+.dark-theme .gopher-container img {
+    filter: invert(1);
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+}
