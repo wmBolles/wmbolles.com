@@ -24,22 +24,7 @@
   crossorigin="anonymous"></script>
   <script type="text/javascript">
 
-    $.getJSON('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=prithvijeet&api_key=88014e31fee3feab453dcef4f428e4dc&format=json',
 
-      function (data) {
-        let artist = document.getElementById("song")
-        let name = document.getElementById("track")
-
-        track = $(".track"),
-          artistVal = data.recenttracks.track[0].artist["#text"],
-          trackVal = data.recenttracks.track[0].name;
-
-
-        artist.append(artistVal);
-        name.append(trackVal);
-
-
-      });
 
   </script>
   <title>~/wmbolles/bash</title>
