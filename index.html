@@ -1,29 +1,246 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Under <> Maintenance</title>
-        <meta charset="UTF-8">
-        <meta http-equiv="Content-Security-Policy" content="base-uri 'self'; default-src 'none'; form-action 'self'; style-src 'self' https://fonts.googleapis.com https://use.fontawesome.com; font-src 'self' https://fonts.gstatic.com https://use.fontawesome.com; frame-src 'self'; frame-ancestors 'none'; img-src 'self' https://www.google-analytics.com https://stats.g.doubleclick.net; media-src 'self'; script-src 'self' https://www.google-analytics.com https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com;">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">   
-        <!-- css -->
-        <link rel="stylesheet" href="maintenance.css">
-        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-        <!-- analytics code -->
-        <script src="analytics_maintenance.js"></script>
-    </head>
-    <body>
-        <div class="container">
-            <div>
-                <h1>Sorry!</h1>
-                <p>This website is currently under maintenance. We will be back online soon.</p>
-            	<span><a href="https://github.com/wmBolles"> wassim bolles </a><span/>
-		</div>
-            <div class="picture_bg">
-                <!-- Please retain the copyright tag below if using this image  -->
-                <p><small>Image <i class="far fa-copyright"></i> wassim bolles</small></p>
-            </div>
-        </div>
-        <!-- font awesome -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/intro.css">
+	<link rel="icon" type="image/x-icon" href="assets/wm.png">
+    <title>wmBolles</title>
+
+    <meta property="og:title" content="Wassim Bolles">
+    <meta property="og:title" content="WAASSIM BOLLES">
+    <meta name="description" content="WASSIM BOLLES wassim bolles wmbolles"> <!-- test -->
+    <meta property="og:description" content="Wassim bolless profile">
+    <meta property="og:image" content="https://scontent.fcmn1-3.fna.fbcdn.net/v/t39.30808-6/408049471_1781674012272313_6071001480103352144_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=2nj74q6IjuEQ7kNvgGFFNfp&_nc_ht=scontent.fcmn1-3.fna&oh=00_AfA76Biw6_I5JiLTor5VOJlLGAKw3-1afp95BdolEAkSfA&oe=6630B1AF">
+    <meta property="og:url" content="https://example.com">
+    <meta property="og:type" content="wmbolles.com">
+    
+    <!-- Twitter Card Meta Tags (optional) -->
+    <meta name="twitter:card" content="Profile image">
+    <meta name="twitter:title" content="Wassim Bolles">
+    <meta name="twitter:description" content="Wassim Bolles Profile">
+    <meta name="twitter:image" content="https://scontent.fcmn1-3.fna.fbcdn.net/v/t39.30808-6/408049471_1781674012272313_6071001480103352144_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=2nj74q6IjuEQ7kNvgGFFNfp&_nc_ht=scontent.fcmn1-3.fna&oh=00_AfA76Biw6_I5JiLTor5VOJlLGAKw3-1afp95BdolEAkSfA&oe=6630B1AF">
+
+
+</head>
+<body>
+<div class="nav-wrapper">
+    <div class="container"">
+        <main>
+          <header>
+            <h2 class="subheader">Hey ! i'm</h2>
+            <h2>Wassim Bolles <em></em></h2>
+            <p>It Architect Student. </p>
+          </header>
+      
+          <img src="https://avatars.githubusercontent.com/u/106280014?v=4" alt="" />
+      
+          <section>
+            <h2>Education</h2>
+            <p><img src="https://42.fr/wp-content/uploads/2021/05/42-Final-sigle-seul.svg" alt=""> School</p>
+			<p><img src="https://pbs.twimg.com/profile_images/1470324396095066120/t8F5Ai57_400x400.jpg"></p>
+          </section>
+      
+          <section>
+      
+            <h2>Projects</h2>
+            <p><a href="https://github.com/wmbolles"><img href="https://github.com/wmbolles" src="https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_1280.png"></p></a>
+			<div align="right">Copyright © wmBolles</div>
+		</main>
+      
+		</div><div class="cursor"></div></div>
+
+      <a href="https://github.com/wmbolles" class="btn-shine" target="_blank">wmBolles</a>
+      <script type="text/javascript">
+        function openPage2() {
+            window.location.href = 'https://wmbolles.com/bash';
+        }
+        setTimeout(openPage2, 5500);
+    </script>
+      <script src="https://codepen.io/shshaw/pen/QmZYMG.js"></script>
+</body>
+
+
+
+<style>
+  html, body {
+  margin: 0;
+  padding: 0;
+  cursor: none;
+}
+
+.nav-wrapper {
+  width: 100%;
+  height: 100vh;
+  background: #161616;
+}
+
+nav {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+}
+
+.hover-this {
+  transition: all 0.1s ease;
+}
+
+.cursor {
+  pointer-events: none;
+  position: fixed;
+  padding: 0.3rem;
+  background-color: #fff;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  transition: transform 0.1s ease;
+}
+
+.hover-this:hover ~ .cursor {
+  transform:translate(-50%, -50%) scale(8);
+}
+
+@media(min-width: 900px) {
+  nav {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media(max-width: 900px) {
+  nav {
+    top: 30%;
+  }
+  
+  .hover-this {
+    width: 100%;
+    padding: 20px 0;
+    display: inline-block;
+  }
+}
+
+.btn-shine {
+  position: absolute;
+  top: 4vh;
+  left: 10vh;
+  transform: translate(-50%, -50%);
+  padding: 12px 48px;
+  color: #fff;
+  background: linear-gradient(to right, #4d4d4d 0, #fff 10%, #4d4d4d 20%);
+  background-position: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 4.5s infinite linear;
+  animation-fill-mode: forwards;
+  -webkit-text-size-adjust: none;
+  font-weight: 600;
+  font-size: 20px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-shinee {
+  position: absolute;
+  top: 96.4vh;
+  left: 11vh;
+  transform: translate(-50%, -50%);
+  padding: 12px 48px;
+  color: #fff;
+  background: linear-gradient(to right, #4d4d4d 0, #fff 10%, #4d4d4d 20%);
+  background-position: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 4.5s infinite linear;
+  animation-fill-mode: forwards;
+  -webkit-text-size-adjust: none;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+@-moz-keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 180px;
+  }
+}
+@-webkit-keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 180px;
+  }
+}
+@-o-keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 180px;
+  }
+}
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 180px;
+  }
+  100% {
+    background-position: 180px;
+  }
+}
+
+</style>
+
+<script>
+document.addEventListener('contextmenu', event => event.preventDefault());
+document.onkeydown = function(e) {
+    if(e.key === "F12" || (e.ctrlKey && e.shiftKey && e.key === "I")) {
+        return false;
+    }
+};
+
+
+  (function () {
+  
+        const link = document.querySelectorAll('.container');
+        const cursor = document.querySelector('.cursor');
+  
+        const animateit = function (e) {
+              const span = this.querySelector('span');
+              const { offsetX: x, offsetY: y } = e,
+              { offsetWidth: width, offsetHeight: height } = this,
+              move = 45,
+              xMove = x / width * (move * 2) - move,
+              yMove = y / height * (move * 2) - move;
+              span.style.transform = `translate(${xMove}px, ${yMove}px)`;
+              if (e.type === 'mouseleave') span.style.transform = '';
+        };
+  
+        const editCursor = e => {
+              const { clientX: x, clientY: y } = e;
+              cursor.style.left = x + 'px';
+              cursor.style.top = y + 'px';
+        };
+  
+        link.forEach(b => b.addEventListener('mousemove', animateit));
+        link.forEach(b => b.addEventListener('mouseleave', animateit));
+        window.addEventListener('mousemove', editCursor);
+  
+  })();</script>
+
 </html>
