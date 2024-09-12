@@ -8,23 +8,17 @@
   <title>~/Gallery</title>
   <meta name="description"
     content="Hey i'm Wassim Bolles, Full stack Developer & Student at 42 network school | 1337 Future is loading">
-  <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/wmBolles/wmbolles.com/master/assets/wm.png" />
   <link rel="stylesheet" href="dist/output.css" />
   <link rel="stylesheet" href="styles.css" />
-  <!-- Alpine.js -->
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-  <!-- Start - Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Signika:wght@400;700&display=swap" rel="stylesheet">
-  <!-- End - Fonts -->
-  <!-- Start - Fancybox Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"
     integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-  <!-- End - Fancybox Scripts -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -45,9 +39,7 @@
 
 <body
   class="dark:bg-black bg-white h-screen text-black dark:text-white px-5 md:px-20 opacity-0 animate-fade-in transition duration-500">
-  <!-- Navbar -->
   <header class="flex w-full overflow-hidden pt-10 pb-1">
-    <!-- Navbar -->
     <nav id="nav" x-data="{ open: false }" role="navigation" class="w-full">
       <div class="container mx-auto flex flex-wrap items-center md:flex-no-wrap">
         <div class="mr-4 md:mr-8">
@@ -85,7 +77,6 @@
       </div>
     </nav>
   </header>
-  <!-- Content -->
   <div class="container mx-auto">
     <h1 class="text-4xl pt-10 pb-8 font-bold">Gallery</h1>
     <section class="text-neutral-700">
@@ -405,7 +396,6 @@
       </p>
     </div>
   </footer>
-  <!-- Script for the LightBox -->
   <script>
     Fancybox.bind("[data-fancybox]", {});
   </script>
