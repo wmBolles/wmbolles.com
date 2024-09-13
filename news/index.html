@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+            integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+            crossorigin="wassim bolles" />
+        <link rel="stylesheet" href="style.css">
+        <title>wmbolles | news</title>
+    </head>
+
+    <body>
+        <section class="bg"></section>
+        <div class="loading-text">0%
+
+
+        <div class="container">
+            <div class="circle-container">
+                <div class="circle">
+                    <button id="close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <button id="open">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="content">
+                <h1>Amazing Article</h1>
+                <small>Florin Pop</small>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, eaque odio. Fugiat reiciendis,
+                    quaerat ipsa ad sapiente ab vero tenetur, officiis modi rem nobis, natus soluta dolores molestias.
+                    Eligendi, quidem!
+                </p>
+
+                <h3>My Dog</h3>
+                <img src="https://images.unsplash.com/photo-1507146426996-ef05306b995a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80"
+                    alt="puppy" />
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure eaque, dolor cumque, facilis quae
+                    suscipit similique fuga temporibus sed laudantium voluptatem aperiam voluptate atque sapiente
+                    officia alias quaerat, sint iste.
+                </p>
+            </div>
+        </div>
+
+        <nav>
+            <ul>
+                <li>
+                    <i class="fa fa-home">
+                        <a href="">Home</a>
+                    </i>
+                </li>
+                <li>
+                    <i class="fa fa-user-alt">
+                        <a href="">About</a>
+                    </i>
+                </li>
+                <li>
+                    <i class="fa fa-envelope">
+                        <a href="">Contact</a>
+                    </i>
+                </li>
+            </ul>
+        </nav>
+        <script src="script.js"></script>
+    </body>
+</div>
+</html>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.bg {
+    /* background: url('https://images.unsplash.com/photo-1576161787924-01bb08dad4a4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2104&q=80') no-repeat center center/cover; */
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    width: calc(100vw + 60px);
+    height: calc(100vh + 60px);
+    z-index: -1;
+    filter: blur(0px);
+}
+
+.loading-text {
+    font-size: 50px;
+    color: #fff;
+}
+
+</style>
+<script>
+const loadText = document.querySelector('.loading-text')
+const bg = document.querySelector('.bg')
+
+let load = 0
+
+let int = setInterval(blurring, 30)
+
+function blurring () {
+    load++
+
+    if (load > 99)
+        clearInterval(int)
+
+    loadText.innerHTML = `${ load }%`
+    loadText.style.opacity = scale(load, 0, 100, 1, 0)
+    bg.style.filter = `blur(${ scale(load, 0, 100, 30, 0) }px)`
+}
+
+
+const scale = (num, inMin, inMax, outMin, outMax) => {
+    return ((num - inMin) * (outMax - outMin)) / (inMax - inMin) + outMin
+}
+</script>
