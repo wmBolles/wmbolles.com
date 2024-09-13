@@ -5,6 +5,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+        <meta name="description" content="WASSIM BOLLES wassim bolles wmbolles">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
             integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
             crossorigin="wassim bolles" />
@@ -13,9 +15,8 @@
     </head>
 
     <body>
-        <section class="bg"></section>
-        <div class="loading-text">0%
-
+        <div class="loading-text">0%</div>
+        <section class="bg">
 
         <div class="container">
             <div class="circle-container">
@@ -28,27 +29,23 @@
                     </button>
                 </div>
             </div>
-
+        <div class="check">
             <div class="content">
-                <h1>Amazing Article</h1>
-                <small>Florin Pop</small>
+                <h1 style="margin-bottom: 5vh; margin-top: 0vh; font-size: xx-large">News</h1>
                 <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, eaque odio. Fugiat reiciendis,
-                    quaerat ipsa ad sapiente ab vero tenetur, officiis modi rem nobis, natus soluta dolores molestias.
-                    Eligendi, quidem!
+                    
                 </p>
-
-                <h3>My Dog</h3>
-                <img src="https://images.unsplash.com/photo-1507146426996-ef05306b995a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80"
-                    alt="puppy" />
+                
+                <h3>Meeting with Ms. Ghita Mezzour, Minister Delegate in charge of Digital Transition and Administrative Reform.</h3>
+                <small>26 May 2024</small><br><br>
+                <img src="https://pbs.twimg.com/media/GXI2P1jXcAAyZdc?format=jpg&name=medium"/>
                 <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure eaque, dolor cumque, facilis quae
-                    suscipit similique fuga temporibus sed laudantium voluptatem aperiam voluptate atque sapiente
-                    officia alias quaerat, sint iste.
+                    posted by <a href="https://x.com/wassimbolles01">@wassimbolles01</a> on X.com
                 </p>
+                source: <a href="https://x.com/wassimbolles01/status/1833587647886803238">click here</a>
             </div>
         </div>
-
+        </div>
         <nav>
             <ul>
                 <li>
@@ -58,7 +55,7 @@
                 </li>
                 <li>
                     <i class="fa fa-user-alt">
-                        <a href="">About</a>
+                        <a href="https://github.com/wmBolles">Github</a>
                     </i>
                 </li>
                 <li>
@@ -68,43 +65,21 @@
                 </li>
             </ul>
         </nav>
-        <script src="script.js"></script>
+        </section>
     </body>
-</div>
 </html>
 
 <style>
 
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 
-* {
-    box-sizing: border-box;
-}
-
-
-body {
-    font-family: 'Ubuntu', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    overflow: hidden;
-    margin: 0;
-}
 
 .bg {
-    /* background: url('https://images.unsplash.com/photo-1576161787924-01bb08dad4a4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2104&q=80') no-repeat center center/cover; */
-    position: absolute;
-    top: -30px;
-    left: -30px;
-    width: calc(100vw + 60px);
-    height: calc(100vh + 60px);
-    z-index: -1;
     filter: blur(0px);
 }
 
 .loading-text {
-    font-size: 50px;
+
     color: #fff;
 }
 
@@ -115,7 +90,7 @@ const bg = document.querySelector('.bg')
 
 let load = 0
 
-let int = setInterval(blurring, 30)
+let int = setInterval(blurring, 17)
 
 function blurring () {
     load++
