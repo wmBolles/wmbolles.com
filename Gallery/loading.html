@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/x-icon" href="../#">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>loading...</title>
@@ -10,32 +11,47 @@
 </head>
 <body><br>
     <h1>loading...<span style="font-size: small;"><br>We're preparing something special for you. Just a moment, please!</span></h1>
+    <h2>Developed by <a href="https://github.com/wmBolles">wassim bolles</a></h2>
     <div class="box">
         <span style="--i:1">
-            <img src="assets/Mohana_sunset_trees.jpg" alt="Mohana_sunset_trees">
+            <img src="./pics/img1000.png" alt="Mohana_sunset_trees">
         </span>
         <span style="--i:2">
-            <img src="assets/plane_sky_best.jpg" alt="plane_sky">
+            <img src="./pics/img3.png" alt="plane_sky">
         </span>
         <span style="--i:3">
-            <img src="assets/Rangoli_design.jpg" alt="Rangoli_design">
+            <img src="./pics/img1337.jpg" alt="Rangoli_design">
         </span>
         <span style="--i:4">
-            <img src="assets/sunset_at_saltlake.jpg" alt="sunset_at_saltlake">
+            <img src="./pics/img1010.png" alt="sunset_at_saltlake">
         </span>
         <span style="--i:5">
-            <img src="assets/taxi_side.jpg" alt="taxi_side">
+            <img src="./pics/img1002.png" alt="taxi_side">
         </span>
         <span style="--i:6">
-            <img src="assets/udaypur_paraglydig.jpg" alt="udaypur_paraglydig">
+            <img src="./pics/img1020.png" alt="udaypur_paraglydig">
         </span>
         <span style="--i:7">
-            <img src="assets/Water_drops_on_leaves.jpg" alt="Water_drops_on_leaves">
+            <img src="./pics/img12.png" alt="Water_drops_on_leaves">
         </span>
         <span style="--i:8">
-            <img src="assets/White_flower.jpg"  alt="White_flower ">
+            <img src="./pics/img19.png"  alt="White_flower ">
         </span>
 
     </div>
 </body>
 </html>
+<script>
+    document.addEventListener('contextmenu', event => event.preventDefault());
+    document.onkeydown = function(e) {
+    if(e.key === "F12" || (e.ctrlKey && e.shiftKey && e.key === "I")) {
+        return false;
+    }
+};
+
+            function openPage2() {
+                window.location.href = './index.html';
+            }
+            setTimeout(openPage2, 22500);
+
+</script>
