@@ -3,93 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Persistent Timer</title>
+    <title>Count Up Timer</title>
     <style>
         body {
+            font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #b9b9b9;
         }
-        .timer-container {
+
+        .timer {
+            background: #fffcfc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
-        .timer {
-            font-size: 48px;
-            margin-bottom: 20px;
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
         }
-        .btn {
+
+        .time {
+            font-size: 3em;
+            margin: 10px 0;
+        }
+
+        .label {
+            font-size: 0.8em;
+            color: #555;
+        }
+
+        button {
             padding: 10px 20px;
-            font-size: 18px;
+            font-size: 1em;
             border: none;
-            background-color: #4CAF50;
-            color: white;
+            border-radius: 5px;
             cursor: pointer;
+            background-color: rgb(4, 209, 4);
+            color: rgb(0, 0, 0);
+            margin-top: 20px;
         }
-        .btn:hover {
-            background-color: #45a049;
+
+        button:hover {
+            background-color: #0056b3;
+			font-size: xx-large;
         }
     </style>
 </head>
 <body>
 
-<div class="timer-container">
-    <div class="timer" id="timer">00:00:00</div>
-    <button class="btn" id="toggleBtn">Start</button>
+<div class="timer">
+    <h1>Minishell Timer</h1>
+	<h4 style="color: gray;">Max hours 420h</h4>
+    <div class="time">
+        <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
+    </div>
+    <div class="label">
+        <span>Hours</span> | <span>Minutes</span> | <span>Seconds</span>
+    </div>
+    <button id="stopButton">Stop Timer</button>
 </div>
 
 <script>
-    let timerDisplay = document.getElementById('timer');
-    let toggleBtn = document.getElementById('toggleBtn');
-    let startTime = 0;
-    let elapsedTime = localStorage.getItem('elapsedTime') ? parseInt(localStorage.getItem('elapsedTime')) : 0;
-    let timerInterval = null;
-    let running = false;
+function countUp(maxHours) {
+    let timer, hours, minutes, seconds;
+    
+    let maxTime = maxHours * 3600; // Convert 420 hours to seconds
+    let startTime = new Date().getTime(); // Start time
+    let timeElapsed = 0; // Initialize time elapsed
 
-    function formatTime(ms) {
-        let totalSeconds = Math.floor(ms / 1000);
-        let hours = Math.floor(totalSeconds / 3600);
-        let minutes = Math.floor((totalSeconds % 3600) / 60);
-        let seconds = totalSeconds % 60;
+    timer = setInterval(calculate, 1000);
 
-        return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
-    }
+    function calculate() {
+        timeElapsed++; // Increment time elapsed by one second
 
-    function updateTimerDisplay() {
-        timerDisplay.textContent = formatTime(elapsedTime);
-    }
+        if (timeElapsed <= maxTime) {
+            hours   = parseInt(timeElapsed / 3600);
+            let remainingTime = timeElapsed % 3600;
 
-    function startTimer() {
-        startTime = Date.now() - elapsedTime;
-        timerInterval = setInterval(function() {
-            elapsedTime = Date.now() - startTime;
-            updateTimerDisplay();
-            localStorage.setItem('elapsedTime', elapsedTime);
-        }, 1000);
-        running = true;
-        toggleBtn.textContent = 'Stop';
-    }
+            minutes = parseInt(remainingTime / 60);
+            seconds = remainingTime % 60;
 
-    function stopTimer() {
-        clearInterval(timerInterval);
-        running = false;
-        toggleBtn.textContent = 'Start';
-    }
-
-    toggleBtn.addEventListener('click', function() {
-        if (running) {
-            stopTimer();
+            // Update the HTML elements
+            document.getElementById("hours").innerHTML   = ("0" + hours).slice(-2);
+            document.getElementById("minutes").innerHTML = ("0" + minutes).slice(-2);
+            document.getElementById("seconds").innerHTML = ("0" + seconds).slice(-2);
         } else {
-            startTimer();
+            clearInterval(timer); // Stop the timer after reaching maxTime
         }
-    });
+    }
 
-    // Initialize the timer display with the saved value
-    updateTimerDisplay();
+    // Add event listener for the stop button
+    document.getElementById("stopButton").addEventListener("click", function() {
+        clearInterval(timer); // Stop the timer when button is clicked
+    });
+}
+
+// Start counting up to 420 hours
+countUp(420);
 </script>
 
 </body>
 </html>
-
