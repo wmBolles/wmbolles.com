@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persistent Timer</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .timer-container {
+            text-align: center;
+        }
+        .timer {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="timer-container">
+    <div class="timer" id="timer">00:00:00</div>
+    <button class="btn" id="toggleBtn">Start</button>
+</div>
+
+<script>
+    let timerDisplay = document.getElementById('timer');
+    let toggleBtn = document.getElementById('toggleBtn');
+    let startTime = 0;
+    let elapsedTime = localStorage.getItem('elapsedTime') ? parseInt(localStorage.getItem('elapsedTime')) : 0;
+    let timerInterval = null;
+    let running = false;
+
+    function formatTime(ms) {
+        let totalSeconds = Math.floor(ms / 1000);
+        let hours = Math.floor(totalSeconds / 3600);
+        let minutes = Math.floor((totalSeconds % 3600) / 60);
+        let seconds = totalSeconds % 60;
+
+        return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+    }
+
+    function updateTimerDisplay() {
+        timerDisplay.textContent = formatTime(elapsedTime);
+    }
+
+    function startTimer() {
+        startTime = Date.now() - elapsedTime;
+        timerInterval = setInterval(function() {
+            elapsedTime = Date.now() - startTime;
+            updateTimerDisplay();
+            localStorage.setItem('elapsedTime', elapsedTime);
+        }, 1000);
+        running = true;
+        toggleBtn.textContent = 'Stop';
+    }
+
+    function stopTimer() {
+        clearInterval(timerInterval);
+        running = false;
+        toggleBtn.textContent = 'Start';
+    }
+
+    toggleBtn.addEventListener('click', function() {
+        if (running) {
+            stopTimer();
+        } else {
+            startTimer();
+        }
+    });
+
+    // Initialize the timer display with the saved value
+    updateTimerDisplay();
+</script>
+
+</body>
+</html>
+
