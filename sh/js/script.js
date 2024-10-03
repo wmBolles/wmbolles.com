@@ -70,6 +70,16 @@ function executeCommand(command) {
 			window.open('https://github.com/ruinedm', '_blank');
 			createPrompt();
 			break;
+			case 'RaD':
+			createPrompt();
+			outputWrapper.innerHTML = `
+			
+			<img src="https://avatars.githubusercontent.com/u/67210558?v=4" >
+			<br>
+			RaD is the best full stack web developer in 42 network! 
+            `;
+			windows.open('https://github.com/totallyrad1', '_blank');
+			break;
 		case 'gallery':
 			window.open('../Gallery/intro.html', '_blank');
 			createPrompt();
