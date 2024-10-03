@@ -67,7 +67,7 @@ function executeCommand(command) {
             createPrompt();
             break;
 		case 'gallery':
-			window.open('../Gallery/', '_blank');
+			window.open('../Gallery/intro.html', '_blank');
 			createPrompt();
 			break;
 		case 'home':
