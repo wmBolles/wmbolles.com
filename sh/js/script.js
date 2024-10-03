@@ -72,12 +72,6 @@ function executeCommand(command) {
 			break;
 			case 'RaD':
 			createPrompt();
-		case 'marin':
-			createPrompt();
-			outputWrapper.innerHTML = `
-			<img src="https://cdn.intra.42.fr/users/a859a46d3204c4e2f3ba19d6fe2fd28d/mbenchel.jpg" >
-            `;
-            break;
 		case 'gallery':
 			window.open('../Gallery/intro.html', '_blank');
 			createPrompt();
@@ -99,7 +93,7 @@ function executeCommand(command) {
 			createPrompt();
 			break;
 		case 'go':
-			window.open('../go/index.html', '_blank');
+			window.open('../go/', '_blank');
 			createPrompt();
 			break;
 		case '404':
