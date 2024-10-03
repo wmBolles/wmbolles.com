@@ -71,11 +71,11 @@ function executeCommand(command) {
 			createPrompt();
 			break;
 		case 'gallery':
-			window.open('../Gallery/', '_blank');
+			window.open('../Gallery/intro', '_blank');
 			createPrompt();
 			break;
 		case 'home':
-			window.open('../index.html', '_blank');
+			window.open('../index', '_blank');
 			createPrompt();
 			break;
 		case 'chaouni':
@@ -83,7 +83,7 @@ function executeCommand(command) {
 			createPrompt();
 			break;
 		case 'news':
-			window.open('../News/intro.html', '_blank');
+			window.open('../News/intro', '_blank');
 			createPrompt();
 			break;
 		case 'go':
@@ -92,11 +92,11 @@ function executeCommand(command) {
 			createPrompt();
 			break;
 		case '404':
-			window.open('../404.html', '_blank');
+			window.open('../invalid', '_blank');
 			createPrompt();
 			break;
 		case 'index.html':
-			window.open('../404.html', '_blank');
+			window.open('../404', '_blank');
 			createPrompt();
 			break;
 		case 'cd':
