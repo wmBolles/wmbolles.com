@@ -62,7 +62,6 @@ function executeCommand(command) {
             appendOutput(' whoami <br>');
             appendOutput(' 404 <br>');
             appendOutput(' home <br>');
-            appendOutput(' chkon nta <br>');
 
             createPrompt();
             break;
