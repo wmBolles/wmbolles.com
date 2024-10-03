@@ -72,14 +72,12 @@ function executeCommand(command) {
 			break;
 			case 'RaD':
 			createPrompt();
+		case 'marin':
+			createPrompt();
 			outputWrapper.innerHTML = `
-			
-			<img src="https://avatars.githubusercontent.com/u/67210558?v=4" >
-			<br>
-			RaD is the best full stack web developer in 42 network! 
+			<img src="https://cdn.intra.42.fr/users/a859a46d3204c4e2f3ba19d6fe2fd28d/mbenchel.jpg" >
             `;
-			windows.open('https://github.com/totallyrad1', '_blank');
-			break;
+            break;
 		case 'gallery':
 			window.open('../Gallery/intro.html', '_blank');
 			createPrompt();
