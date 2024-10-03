@@ -66,6 +66,10 @@ function executeCommand(command) {
 
             createPrompt();
             break;
+		case 'ruined':
+			window.open('https://github.com/ruinedm', '_blank');
+			createPrompt();
+			break;
 		case 'gallery':
 			window.open('../Gallery/intro.html', '_blank');
 			createPrompt();
