@@ -70,22 +70,16 @@ function executeCommand(command) {
 			window.open('https://github.com/ruinedm', '_blank');
 			createPrompt();
 			break;
-			case 'RaD':
-			createPrompt();
 		case 'gallery':
-			window.open('../Gallery/intro.html', '_blank');
+			window.open('../Gallery/', '_blank');
 			createPrompt();
 			break;
 		case 'home':
 			window.open('../index.html', '_blank');
 			createPrompt();
 			break;
-		case 'chkon nta':
-			outputWrapper.innerHTML = `
-			
-			li 7wak <br> 1 - 0
-			
-            `
+		case 'chaouni':
+			window.open('https://github.com/aboubakrbkd', '0');
 			createPrompt();
 			break;
 		case 'news':
@@ -93,7 +87,8 @@ function executeCommand(command) {
 			createPrompt();
 			break;
 		case 'go':
-			window.open('../go/', '_blank');
+			window.open('../go', '_blank');
+			// window.location.href = '../go';
 			createPrompt();
 			break;
 		case '404':
