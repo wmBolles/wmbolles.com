@@ -26,7 +26,7 @@ valid : () => {
 		if (localStorage.getItem(dwLogin.lUser.value) == "thef")
 			{open('./thef/');
 	}else{
-		open('index.html');
+		open('404');
 	}
 	} else if (dwLogin.lUser.value == "" || dwLogin.lPass.value == "") {
 		alert('user/password cannot be empty');
