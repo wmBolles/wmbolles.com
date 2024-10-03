@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>E-wallet</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <!-- menu section -->
+    <section id="menu">
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+            aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <!-- <div>
+                Some text as placeholder. In real life you can have the elements you have chosen. Like, text,
+                images, lists, etc.
+            </div> -->
+                <div class="menu">
+                    <div class="container">
+                        <div class="item" onclick="redirect('./index.html')">
+                            <i class="fa fa-home"></i>
+                            <p>Home</p>
+                        </div>
+                        <div class="item" onclick="redirect('./inbox.html')">
+                            <i class="fa fa-history"></i>
+                            <p>History</p>
+                        </div>
+                        <div class="item" onclick="redirect('./bank.html')">
+                            <i class="fa fa-university"></i>
+                            <p>Bank</p>
+                        </div>
+                        <div class="item" onclick="redirect('./about-us.html')">
+                            <i class="fa fa-info"></i>
+                            <p>About us</p>
+                        </div>
+                        <div class="item" onclick="redirect('./faq.html')">
+                            <i class="fa fa-question"></i>
+                            <p>FAQ</p>
+                        </div>
+                        <div class="item">
+                            <i class="fa fa-money"></i>
+                            <p>Currency converter <i style="font-size: 10px; color: rgb(147, 147, 147);">(Upcoming)</i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span class="menu-footer">
+                Designed by Victor Josiah © 2021 <br>
+                <button class="btn btn-primary btn-sm">
+                    <a href="https://github.com/jovick-coder/E-wallet">
+                        GitHub
+                        <i class="fa fa-github"></i>
+                    </a>
+                </button>
+            </span>
+        </div>
+    </section>
+    <!-- end menu section -->
+
+    <!-- credit modal section -->
+    <section id="credit modal">
+        <!-- Modal -->
+        <div class="modal fade" id="credit" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Credit</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                        <form action="" class="">
+                            <!-- <span><b>Full name</b></span>
+                   <input type="text" class="form-control"> -->
+                            <!-- <span><b>Bank</b></span> -->
+                            <span><b>Card Number</b></span>
+                            <input type="number" class="form-control">
+                            <span><b>Amount</b></span>
+                            <input type="text" class="form-control">
+                            <span><b>Bank</b></span>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Select a Bank</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                            <span><b>Password</b></span>
+                            <input type="password" class="form-control">
+
+                    </div>
+
+                    <div class="payment-icons">
+                        <p></p>
+                        <i class="fa fa-cc-visa" aria-hidden="true"></i>
+                        <i class="fa fa-cc-mastercard" aria-hidden="true"></i>
+                        <i class="fa fa-cc-paypal" aria-hidden="true"></i>
+                        <i class="fa fa-btc" aria-hidden="true"></i>
+                        <p></p>
+                    </div>
+                    <div class="modal-footer">
+
+                        <button type="submit" class="btn btn-outline-primary">Transfer</button>
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end credit -->
+    </section>
+    <!-- end credit modal section -->
+
+    <!-- debit-modal section -->
+    <section id="debit-modal">
+        <!-- Modal -->
+        <div class="modal fade" id="send" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Transfer</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                        <form action="" class="">
+                            <span><b>Full name</b></span>
+                            <input type="text" class="form-control">
+                            <!-- <span><b>Bank</b></span> -->
+                            <span><b>Account Number</b></span>
+                            <input type="text" class="form-control">
+                            <span><b>Amount</b></span>
+                            <input type="text" class="form-control">
+                            <span><b>Bank</b></span>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>Select a Bank</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                            <span><b>E-wallet Password</b></span>
+                            <input type="password" class="form-control">
+
+                    </div>
+
+                    <div class="payment-icons">
+                        <p></p>
+                        <i class="fa fa-cc-visa" aria-hidden="true"></i>
+                        <i class="fa fa-cc-mastercard" aria-hidden="true"></i>
+                        <i class="fa fa-cc-paypal" aria-hidden="true"></i>
+                        <i class="fa fa-btc" aria-hidden="true"></i>
+                        <p></p>
+                    </div>
+                    <div class="modal-footer">
+
+                        <button type="submit" class="btn btn-outline-primary">Transfer</button>
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end send modal -->
+    </section>
+    <!-- end debit-modal section -->
+    <!-- main-continer section -->
+    <section id="main-continer">
+        <div class="wallet-container text-center">
+            <p class="page-title"><i class="fa fa-align-left"></i>My E-wallet<i class="fa fa-user"></i></p>
+
+            <div class="amount-box text-center">
+                <img src="https://lh3.googleusercontent.com/ohLHGNvMvQjOcmRpL4rjS3YQlcpO0D_80jJpJ-QA7-fQln9p3n7BAnqu3mxQ6kI4Sw"
+                    alt="wallet">
+                <p>Total Balance</p>
+                <p class="amount">$ 123</p>
+            </div>
+
+            <!-- Button trigger modal -->
+            <div class="btn-group text-center">
+                <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#send">
+                    <i class="fa fa-exchange" aria-hidden="true"></i> Transfer
+                </button>
+
+
+
+                <button type=" button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#credit">
+                    <i class="fa fa-credit-card"></i> Credit
+                </button>
+            </div>
+
+            <div class="txn-history">
+                <p><b>Resent Trasection</b></p>
+                <p class="txn-list">Transfer to Victor Josiah <br><b>Account Number</b> 2271407922<span
+                        class="debit-amount">$100</span></p>
+                <!-- <button type=" button" class="btn btn-outline-light btn-sm">Confirm </button>
+                <button type=" button" class="btn btn-outline-danger btn-sm">Cancel</button> -->
+                <p class="txn-list">Credit from Victor Josiah <br><b>Account Number</b> 2271407922<span
+                        class="credit-amount">$100</span></p>
+                <!-- <button type=" button" class="btn btn-outline-light btn-sm">Confirm </button>
+                <button type=" button" class="btn btn-outline-danger btn-sm">Cancel </button> -->
+            </div>
+
+            <div class="footer-menu">
+                <div class="row text-center">
+                    <div class="container">
+                        <div class="item" onclick="redirect('./index.html')">
+                            <i class="fa fa-home"></i>
+                            <p></p>
+                        </div>
+                        <div class="item" onclick="redirect('./inbox.html')">
+                            <i class="fa fa-history"></i>
+                            <p></p>
+                        </div>
+                        <div class="item" onclick="redirect('./bank.html')">
+                            <i class="fa fa-university"></i>
+                            <p></p>
+                        </div>
+                        <div class="item" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+                            aria-controls="offcanvasExample">
+                            <i class="fa fa-list"></i>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!--end main-continer section -->
+
+
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

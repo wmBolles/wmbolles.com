@@ -1,0 +1,321 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+:root {
+	--mainBg: linear-gradient(to bottom, #1a1a1a 0%, #333333 100%);
+	--secBg: #F2F2F2;
+	--mainBlue: #0066FF;
+	--txtColorMain: #a6a6a6;
+	--txtColorSec: #F2F2F2;
+	--btnBgAdd: #70AD47;
+	--btnBgWitV: #C00000;
+	--btnBgSav: #0066FF;
+	--btnBgWitR: #FF6600;
+}
+
+* {
+	font-family: Roboto, sans-serif;
+	box-sizing: border-box;
+	font-size: 10px;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	height: 100%;	
+}
+
+html, body {
+	width: 100%;
+}
+
+#money {
+	font-size: 4.8rem;
+	position: absolute;
+	color: var(--txtColorMain);
+	opacity: 0.5;
+	top: 50%;
+}
+
+/*utilites start*/
+
+.flxRow {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.flxCol {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.wlLoad {
+	animation: wlLoad .3s;
+}
+
+/*utilites end*/
+
+/*animation start*/
+
+@keyframes wlLoad {
+	from {
+		top: -20px;
+		opacity: 0;
+	} to {
+		top: 0;	
+		opacity: 1;
+	}
+}
+
+/*animation end*/
+
+/*buttons layout start*/
+
+.btnDiv {
+	flex-flow: row wrap;
+	width: 80%;
+	margin-top: 1rem;
+}
+
+button {
+	cursor: pointer;
+	width: 12rem;
+	height: 2.5rem;
+	margin: 0.5rem;
+	font-size: 1.5rem;
+	text-transform: capitalize;
+	border-style: none;
+	color: var(--txtColorSec);
+}
+
+.addBtn {
+	margin-right: 2rem;
+	background-color: var(--btnBgAdd);
+}
+
+.wdwBtn {
+	margin-left: 1rem;
+	background-color: var(--btnBgWitV);
+}
+
+.svnBtn {
+	margin-top: 1rem;
+	background-color: var(--btnBgSav);
+}
+
+.rsvdBtn {
+	background-color: var(--btnBgWitR);
+}
+
+/*buttons layout end*/
+
+/*figs layout start*/
+
+#trashIcon {
+	cursor: pointer;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	color: var(--txtColorMain);
+}
+
+#binaryIcon {
+	position: absolute;
+	font-size: 7rem;
+	color: silver;
+	bottom: 15px;
+	left: 15px;
+	opacity: 0.2;
+}
+
+#circleIcon {
+	position: absolute;
+	font-size: 7rem;
+	color: silver;
+	top: 0;
+	right: 0;
+	opacity: 0.1;
+}
+
+/*figs layout end*/
+
+#wrapper, header {
+	width: 100%;
+}
+
+#wrapper header {
+	background: var(--mainBg);
+}
+
+header {
+	position: relative;
+	height: 10rem;
+}
+
+#logoDiv, #newWalletDiv {
+	position: absolute;
+}
+
+#logoDiv {
+	top: 1vh;
+	left: 1vh;
+	color: silver;
+}
+
+#logoDiv i {
+	font-size: 6.2rem;
+}
+
+#logoTxt p {
+	margin-left: 1rem;
+	font-size: 1.5rem;
+	text-transform: capitalize;
+}
+
+#newWalletDiv {
+	top: 3.5vh;
+	right: 1vh;
+}
+
+#newBtn {
+	font-size: 1.5rem;
+	text-transform: capitalize;
+	width: 10rem;
+	height: 3rem;
+}
+
+/*wallet layout*/
+
+#walletsDiv {
+	margin-top: 2rem;
+	background-color: white;
+}
+
+.container {
+	position: relative;
+	justify-content: space-around;
+	width: 350px;
+	height: 500px;
+	background: var(--mainBg);
+	border-radius: 1rem;
+	box-shadow: 3px 3px 3px silver;
+}
+
+/*container sizes*/
+
+.topCont, .btmCont {
+	height: 40%;
+}
+
+.midCont {
+	height: 20%;
+}
+
+/*top container layout*/
+
+.topCont {
+	margin-top: 4.5rem;
+}
+
+.topTxtDiv {
+	margin-bottom: 3rem;
+}
+
+.dwTxt {
+	font-size:2.7rem;
+	text-transform: uppercase;
+	color: var(--txtColorSec);
+}
+
+.mwTxt {
+	font-size:1.7rem;
+	color: var(--txtColorMain);
+}
+
+.mwTxt::first-letter, .blcTxt::first-letter {
+	text-transform: capitalize;
+}
+
+.blcTxt {
+	font-size:1.8rem;
+	color: var(--txtColorMain);
+}
+
+.valorTxt {
+	font-size:4rem;
+	color: var(--txtColorMain);
+}
+
+.accTxtDiv {
+	position: relative;
+	width: 80%;
+}
+
+.accTxtDiv i {
+	cursor: pointer;
+	position: absolute;
+	right: 0;
+	bottom: 12px;
+	color: var(--txtColorMain);
+}
+
+/*mid container layout*/
+
+.midCont {
+	position: relative;
+	width: 100%;
+	margin-top: 4rem;
+}
+
+.midCont i {
+	position: absolute;
+	font-size: 8rem;
+	opacity: .8;
+}
+
+/*bottom container layout*/
+
+.btmCont {
+	width: 100%;
+	margin-top: 2rem;
+}
+
+.rsvdTxt {
+	font-size: 1.8rem;
+	color: var(--txtColorMain)
+}
+
+.rsvdTxt::first-letter {
+	text-transform: capitalize;
+	color: var(--txtColorMain);
+}
+
+.rsvdVal {
+	font-size: 4rem;
+	color: var(--txtColorMain);
+}
+
+.reservedDiv {
+	position: relative;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.reservedDiv i {
+	cursor: pointer;
+	position: absolute;
+	right: 0;
+	bottom: 45px;
+	color: var(--txtColorMain);
+}
+
+/*footer*/
+
+footer {
+	position: absolute;
+	margin: 0 auto 1vh;
+	font-size: 2rem;
+	bottom: 0;
+}

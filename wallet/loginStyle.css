@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+:root {
+	--mainBg: linear-gradient(to bottom, #1a1a1a 0%, #333333 100%);
+	--secBg: #f2f2f2a2;
+	--mainBlue: #0350c4;
+}
+
+* {
+	font-family: Roboto, sans-serif;
+	box-sizing: border-box;
+	font-size: 10px;
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	background-image: url('../Gallery/pics/img1012.png');
+	background-size: cover;
+}
+
+/*utilites start*/
+
+.flxRow {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.flxCol {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.pageLoad {
+	animation: pageLoad 1s;
+}
+
+/*utilites end*/
+
+/*animation start*/
+
+@keyframes pageLoad {
+	from {
+		opacity: 0;
+	} to {
+		opacity: 1;		
+	}
+}
+
+/*animation end*/
+
+#wrapper, #pswDiv {
+	width: 30rem;
+	height: 20rem;
+	padding: 1rem;
+	margin: 0 auto;
+	background: var(--secBg);
+	border-radius: 1rem;
+}
+
+form, #session, #pswContainer {
+	width: 100%;
+}
+
+#session span {
+	font-size: 2.3rem;
+	text-transform: capitalize;
+}
+
+#session img {
+	width: 60px;
+	height: 60px;
+}
+
+input {
+	width: 80%;
+	height: 2.5rem;
+}
+
+input[type="submit"] {
+	color: white;
+	background-color: var(--mainBlue);
+	border-style: none;
+	text-transform: uppercase;
+	border-radius: 12%;
+}
+
+#username, #password {
+	padding: 0.5rem;
+}
+
+#username, #submitBtn, #sbmtPsw, #newUsername {
+	margin: 1vh auto;
+	border-radius: 8%;
+	cursor: pointer;
+}
+
+
+
+#pswDiv {
+	display: none;
+}
+
+#message {
+	width: 80%;
+}
+
+#newAcc {
+	cursor: pointer;
+	color: var(--mainBlue);
+}
+
+.valid {
+	color: green;
+}
+
+.valid:before {
+	content: "✔";
+	position: relative;
+	left: -1rem;
+}
+
+.invalid {
+	color: red;
+}
+
+.invalid:before {
+	content: "✖";
+	position: relative;
+	left: -1rem;
+}
+
+footer {
+	position: absolute;
+	margin: 0 auto 1vh;
+	font-size: 2rem;
+	bottom: 0;
+	color: gray;
+}
+
+footer p a {
+	color: silver;
+}
+
+footer p a:visited {
+	color: white;
+}

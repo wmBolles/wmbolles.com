@@ -51,6 +51,8 @@ function executeCommand(command) {
             break;
         case 'help':
             appendOutput('<br>commands:<br><br>');
+            appendOutput(' wallet');
+
             appendOutput(' clear <br>');
             appendOutput(' echo &lt;text&gt; <br>');
             appendOutput(' gallery <br>');
@@ -65,7 +67,12 @@ function executeCommand(command) {
 
             createPrompt();
             break;
+		case 'wallet':
+			window.open('../wallet/', '_blank');
+			createPrompt();
+			break;
 		case 'ruined':
+
 			window.open('https://github.com/ruinedm', '_blank');
 			createPrompt();
 			break;
