@@ -1,5 +1,7 @@
 const prompt = document.querySelector('.input');
 const outputWrapper = document.querySelector('.output-wrapper');
+var l;
+l = 1;
 
 let randomVersion = "";
 function setRandomVersion() {
@@ -44,12 +46,12 @@ function executeCommand(command) {
         createPrompt();
         return;
     }
-
+	
     switch (command) {
-        case '':
-            createPrompt();
+		case '':
+			createPrompt();
             break;
-        case 'help':
+			case 'help':
             appendOutput('<br>commands:<br><br>');
             appendOutput(' wallet');
 
@@ -125,10 +127,20 @@ function executeCommand(command) {
 			</div>
             `;
             break;
+		case 'chkon nta':
+            createPrompt();
+            outputWrapper.innerHTML = `
+			Li 7wak 🤣
+			ha  ${l}-0
+			`;
+			l++;
+			break;
+
+			
+
         case 'clear':
             createPrompt();
             outputWrapper.innerHTML = `
-            
             
             
             `;
