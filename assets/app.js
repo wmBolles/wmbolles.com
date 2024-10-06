@@ -1,5 +1,3 @@
-//BigBang prealoading
-
 const bigbang = document.querySelector("#bigbang");
 
 window.addEventListener("load", () => {

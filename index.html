@@ -8,6 +8,20 @@
 	<link rel="icon" type="image/x-icon" href="./assets/logo/wm.png">
     <link rel="stylesheet" href="assets/style.css">
     <script src="./assets/bigBang.js"></script>
+    <title>Wassim Bolles</title>
+    <meta property="og:title" content="Wassim Bolles">
+    <meta property="og:title" content="WAASSIM BOLLES">
+    <meta name="description" content="WASSIM BOLLES wassim bolles wmbolles">
+    <meta property="og:description" content="Wassim bolless profile">
+    <meta property="og:image" content="https://scontent.fcmn1-3.fna.fbcdn.net/v/t39.30808-6/408049471_1781674012272313_6071001480103352144_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=2nj74q6IjuEQ7kNvgGFFNfp&_nc_ht=scontent.fcmn1-3.fna&oh=00_AfA76Biw6_I5JiLTor5VOJlLGAKw3-1afp95BdolEAkSfA&oe=6630B1AF">
+    <meta property="og:url" content="https://example.com">
+    <meta property="og:type" content="wmbolles.com">
+    <meta name="twitter:card" content="Profile image">
+    <meta name="twitter:title" content="Wassim Bolles">
+    <meta name="twitter:description" content="Wassim Bolles Profile">
+    <meta name="twitter:image" content="https://scontent.fcmn1-3.fna.fbcdn.net/v/t39.30808-6/408049471_1781674012272313_6071001480103352144_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=2nj74q6IjuEQ7kNvgGFFNfp&_nc_ht=scontent.fcmn1-3.fna&oh=00_AfA76Biw6_I5JiLTor5VOJlLGAKw3-1afp95BdolEAkSfA&oe=6630B1AF">
+
+
     <title>wmbolles</title>
 </head>
 <body data-theme="light">
@@ -33,11 +47,59 @@
 
     <section class="home">
         <div>
-            <h1></h1><span class="second-title">wmbolles.com :/</span>
-            <p>coming soon<span>WebSite under DDoS attack, resolving ASAP. Thank you.</span></p>
+            <h1></h1><span class="second-title">wmbolles.com</span>
+            <p>Welcome<span>enjoy !</span></p>
         </div>
     </section>
     
     <script src="assets/app.js"></script>
 </body>
+<script type="text/javascript">
+
+
+	function openPage2() {
+		window.location.href = './intro';
+	}
+	setTimeout(openPage2, 2600);
+
+
+
+	document.addEventListener('contextmenu', event => event.preventDefault());
+document.onkeydown = function(e) {
+    if(e.key === "F12" || (e.ctrlKey && e.shiftKey && e.key === "I")) {
+        return false;
+    }
+};
+
+
+  (function () {
+  
+        const link = document.querySelectorAll('.container');
+        const cursor = document.querySelector('.cursor');
+  
+        const animateit = function (e) {
+              const span = this.querySelector('span');
+              const { offsetX: x, offsetY: y } = e,
+              { offsetWidth: width, offsetHeight: height } = this,
+              move = 45,
+              xMove = x / width * (move * 2) - move,
+              yMove = y / height * (move * 2) - move;
+              span.style.transform = `translate(${xMove}px, ${yMove}px)`;
+              if (e.type === 'mouseleave') span.style.transform = '';
+        };
+  
+        const editCursor = e => {
+              const { clientX: x, clientY: y } = e;
+              cursor.style.left = x + 'px';
+              cursor.style.top = y + 'px';
+        };
+  
+        link.forEach(b => b.addEventListener('mousemove', animateit));
+        link.forEach(b => b.addEventListener('mouseleave', animateit));
+        window.addEventListener('mousemove', editCursor);
+  
+  })();</script>
+
+
+</script>
 </html>

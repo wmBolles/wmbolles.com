@@ -19,34 +19,20 @@ var randomTargetXArr = [], randomTargetYArr = [];
 drawType = 2;
 
 
-/**
- * Initialises WebGL and creates the 3D scene.
- */
 function loadScene() {
-  //    Get the canvas element
   canvas = document.getElementById("bigbang");
-  //    Get the WebGL context
   gl = canvas.getContext("experimental-webgl");
-  //    Check whether the WebGL context is available or not
-  //    if it's not available exit
   if (!gl) {
     alert("There's no WebGL context available.");
     return;
   }
-  //    Set the viewport to the canvas width and height
   cw = window.innerWidth;
   ch = window.innerHeight;
   canvas.width = cw;
   canvas.height = ch;
   gl.viewport(0, 0, canvas.width, canvas.height);
 
-  //    Load the vertex shader that's defined in a separate script
-  //    block at the top of this page.
-  //    More info about shaders: http://en.wikipedia.org/wiki/Shader_Model
-  //    More info about GLSL: http://en.wikipedia.org/wiki/GLSL
-  //    More info about vertex shaders: http://en.wikipedia.org/wiki/Vertex_shader
 
-  //    Grab the script element
   var vertexShaderScript = document.getElementById("shader-vs");
   var vertexShader = gl.createShader(gl.VERTEX_SHADER);
   gl.shaderSource(vertexShader, vertexShaderScript.text);
@@ -57,8 +43,7 @@ function loadScene() {
     return;
   }
 
-  //    Load the fragment shader that's defined in a separate script
-  //    More info about fragment shaders: http://en.wikipedia.org/wiki/Fragment_shader
+
   var fragmentShaderScript = document.getElementById("shader-fs");
   var fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
   gl.shaderSource(fragmentShader, fragmentShaderScript.text);
@@ -69,7 +54,7 @@ function loadScene() {
     return;
   }
 
-  //    Create a shader program.
+
   gl.program = gl.createProgram();
   gl.attachShader(gl.program, vertexShader);
   gl.attachShader(gl.program, fragmentShader);
@@ -81,26 +66,14 @@ function loadScene() {
     gl.deleteProgram(fragmentShader);
     return;
   }
-  //    Install the program as part of the current rendering state
+  
   gl.useProgram(gl.program);
-  //    Get the vertexPosition attribute from the linked shader program
   var vertexPosition = gl.getAttribLocation(gl.program, "vertexPosition");
-  //    Enable the vertexPosition vertex attribute array. If enabled, the array
-  //    will be accessed an used for rendering when calls are made to commands like
-  //    gl.drawArrays, gl.drawElements, etc.
   gl.enableVertexAttribArray(vertexPosition);
 
-  //    Clear the color buffer (r, g, b, a) with the specified color
+  
   gl.clearColor(0.0, 0.0, 0.0, 1.0);
-  //    Clear the depth buffer. The value specified is clamped to the range [0,1].
-  //    More info about depth buffers: http://en.wikipedia.org/wiki/Depth_buffer
   gl.clearDepth(1.0);
-  //    Enable depth testing. This is a technique used for hidden surface removal.
-  //    It assigns a value (z) to each pixel that represents the distance from this
-  //    pixel to the viewer. When another pixel is drawn at the same location the z
-  //    values are compared in order to determine which pixel should be drawn.
-  //gl.enable(gl.DEPTH_TEST);
-
   gl.enable(gl.BLEND);
   gl.disable(gl.DEPTH_TEST);
   gl.blendFunc(gl.SRC_ALPHA, gl.ONE);
