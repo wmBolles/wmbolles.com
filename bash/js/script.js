@@ -85,6 +85,10 @@ function executeCommand(command) {
 			window.open('../home/', '_blank');
 			createPrompt();
 			break;
+		case 'intro':
+			window.open('../', '_blank');
+			createPrompt();
+			break;
 		case 'game':
 			window.open('../game/', '_blank');
 			createPrompt();
