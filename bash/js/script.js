@@ -64,7 +64,8 @@ function executeCommand(command) {
 					' - game',
 					' - 404',
 					' - whoami',
-					' - ping'
+					' - ping',
+					' - 42'
 				];
 				
 				let output = '<br>Available commands:<br>_________________________________________<br>';
@@ -81,6 +82,11 @@ function executeCommand(command) {
 
             createPrompt();
             break;
+		case '42':
+			appendOutput('<br><a style="color: gray; text-decoration: none; " href="https://profile.intra.42.fr/users/wabolles" class="nav__link"><img src="https://profile.intra.42.fr/assets/42_logo-7dfc9110a5319a308863b96bda33cea995046d1731cebb735e41b16255106c12.svg" style="width: 4vh; height: 4vh;" alt="">wabolles</a>');
+			createPrompt();
+			break;
+
 		case 'home':
 			window.open('../home/', '_blank');
 			createPrompt();
