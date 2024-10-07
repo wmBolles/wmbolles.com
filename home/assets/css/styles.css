@@ -225,17 +225,17 @@ img{
 }
 .home__img {
     position: absolute;
-    left: 55%;
-    bottom: 20%;
+    left: 51%;
+    bottom: 13%;
     width: 80%;
-    max-width: 600px;
+    max-width: 750px;
 }
 
 @media (max-width: 768px) {
     .home__img {
-        left: 5%;
+        left: -4%;
         bottom: 10%;
-        width: 90%;
+        width: 80%;
     }
 }
 
@@ -413,7 +413,7 @@ img{
 
 /* ===== MEDIA QUERIES =====*/
 /* For small devices */
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 768px) {
   .home__img {
     width: 230px;
   }
