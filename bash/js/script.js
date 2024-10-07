@@ -84,6 +84,7 @@ function executeCommand(command) {
             break;
 		case '42':
 			appendOutput('<br><a style="color: gray; text-decoration: none; " href="https://profile.intra.42.fr/users/wabolles" class="nav__link"><img src="https://profile.intra.42.fr/assets/42_logo-7dfc9110a5319a308863b96bda33cea995046d1731cebb735e41b16255106c12.svg" style="width: 4vh; height: 4vh;" alt="">wabolles</a>');
+			appendOutput('<a href="https://github.com/oakoudad/badge42"><img src="https://badge.mediaplus.ma/kettlebells/wabolles" alt="wabolles\'s 42 stats" /></a>');
 			createPrompt();
 			break;
 
