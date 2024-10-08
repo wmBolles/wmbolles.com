@@ -2,6 +2,7 @@
     <html lang="en">
     <head>
         <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 		<meta property="og:title" content="Wassim Bolles">
 		<meta property="og:title" content="WAASSIM BOLLES">
 		<meta name="description" content="WASSIM BOLLES wassim bolles wmbolles">
@@ -12,6 +13,12 @@
 		<link rel="icon" type="image/x-icon" href="../assets/logo/wm.png">
         <title>~/Home</title>
     </head>
+	<style>
+        ::selection {
+            background-color: #697477;
+            color: #ffffff;
+        }
+    </style>
     <body>
         <header class="l-header">
             <nav class="nav bd-grid">
@@ -28,6 +35,7 @@
                         <li class="nav__item"><a href="#portfolio" class="nav__link">Projects</a></li>
                         <li class="nav__item"><a href="../Gallery/intro" class="nav__link">Gallery</a></li>
                         <li class="nav__item"><a href="../news/intro" class="nav__link">News</a></li>						
+						<li title="Free Palestine"   class="nav__item"><img src="assets/img/flag.jpg" width="45px" alt="Free Palestine"></li>
                     </ul>
                 </div>
                 <div class="nav__menu" id="nav-menu">
@@ -49,7 +57,7 @@
             <!--===== HOME =====-->
             <section class="home" id="home">
                 <div class="home__container bd-grid">
-                    <h1 class="home__title"><span>Th</span><br>eF/<span style="font-size: xx-small;  font-family: 'Roboto Mono', monospace;" Hello World !</span></h1>
+                    <h1 class="home__title"><span>Th</span><br>eF/<span style="font-size: xx-small;  font-family: 'Roboto Mono', monospace;">Free Palestine !</span></h1>
 
                     <div class="home__scroll">
                         <a href="#about" class="home__scroll-link"><i class='bx bx-up-arrow-alt' ></i>Scroll down</a>
@@ -91,7 +99,7 @@
             </section>
 
             <!--===== SKILLS =====-->
-            <section class="skills section" id="skills">
+            <section class="skills section" style="background: linear-gradient(350deg,rgba(97, 95, 95, 0.517) ,#fff,#fff) ;" id="skills">
                 <h2 class="section-title">Skills</h2>
 
                 <div class="skills__container bd-grid">
@@ -188,7 +196,7 @@
             </section>
 
             <!--===== CONTACT =====-->
-            <section class="contact section" id="contact">
+            <section class="contact section" style="background: linear-gradient(230deg,rgba(97, 95, 95, 0.517),#fff) ;" id="contact">
                 <h2 class="section-title">Contact</h2>
 
                 <div class="contact__container bd-grid">
@@ -223,10 +231,13 @@
                 <div class="footer__data">
                     <h2 class="footer__title">wmBolles</h2>
                     <p class="footer__text">7 Oct 2024 <span style="color: white;"> ©</span> wmBolles. <br> All Rights Reserved. For more details, visit <a style="color: rgb(224, 224, 244);" href="https://creativecommons.org/share-your-work/cclicenses/">creativecommons</a>.
+					
 					</p>
 					<br>
-					<a href="https://profile.intra.42.fr/users/wabolles" class="nav__link"><img src="https://profile.intra.42.fr/assets/42_logo-7dfc9110a5319a308863b96bda33cea995046d1731cebb735e41b16255106c12.svg" style="width: 4vh; height: 4vh;" alt=""></a>
-
+					<div style=" display:inline-flex">
+					<svg width="86" height="20" viewBox="0 0 76 20" fill="none"><path d="M2.8333 17.6623H5.92418V2.33766H2.31816V5.45455H0V1.49012e-07H8.75748V17.6623H11.8484V20H2.8333V17.6623Z" fill="white"></path><path d="M21.3785 17.6623H30.6512V10.9091H22.1513V8.57143H30.6512V2.33766H21.3785V0H33.4845V20H21.3785V17.6623Z" fill="white"></path><path d="M42.2419 17.6623H51.5146V10.9091H43.0147V8.57143H51.5146V2.33766H42.2419V0H54.3479V20H42.2419V17.6623Z" fill="white"></path><path d="M72.6355 2.33766H64.9084V7.27273H62.5902V0H75.2113V20H72.6355V2.33766Z" fill="white"></path></svg>
+					<a href="https://profile.intra.42.fr/users/wabolles" class="nav__link"><img src="https://profile.intra.42.fr/assets/42_logo-7dfc9110a5319a308863b96bda33cea995046d1731cebb735e41b16255106c12.svg" style="  width: 3vh; height: 4vh; position: relative; bottom: 0.98vh; left: 1vh;" alt=""></a>
+					</div>
                 </div>
 
                 <div class="footer__data">
@@ -264,10 +275,28 @@
             </div>
         </footer>
 
-        <!--===== SCROLL REVEAL =====-->
-        <script src="https://unpkg.com/scrollreveal"></script>
+		<script>
 
+document.addEventListener('keydown', function(event) {
+    if ((event.ctrlKey || event.metaKey) && (event.key === '+' || event.key === '-' || event.key === '0')) {
+        event.preventDefault();
+    }
+}, { passive: false });
+
+
+window.addEventListener('wheel', function(event) {
+    if (event.ctrlKey || event.metaKey) {
+        event.preventDefault();
+    }
+}, { passive: false });
+
+		</script>
+		
+        
+        <script src="https://unpkg.com/scrollreveal"></script>
+		
         <!--===== MAIN JS =====-->
         <script src="assets/js/main.js"></script>
     </body>
 </html>
+
