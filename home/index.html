@@ -51,7 +51,7 @@
                 </div>
                 <div class="nav__menu" id="nav-menu">
 					<ul>
-						<li style="bottom: 4vh;" class="nav__item"><a href="../bash/" class="nav__link">Bash</a></li>
+						<li style="bottom: 4vh;" class="nav__item"><a href="../bash/" class="nav__link">CLI</a></li>
 						
 					</ul>
                 </div>
@@ -78,7 +78,7 @@
             </section>
             
             <!--===== ABOUT =====-->
-            <section class="about section" style="background: linear-gradient(#fff,rgb(0, 195, 255)); transform: rotate(2deg);  border-radius: 10vh;" id="about">
+            <section class="about section" style="background: linear-gradient(#fff,rgb(0, 195, 255)); transform: rotate(0deg);  border-top-left-radius: 10vh; border-top-right-radius: 10vh;" id="about">
                 <h2 class="section-title">About</h2>
 
                 <div class="about__container bd-grid">
@@ -111,7 +111,7 @@
             </section>
 
 			<!--===== SKILLS =====-->
-            <section class="skills section" style="background: linear-gradient( rgb(0, 195, 255), black);  transform: rotate(-2deg);  border-bottom-right-radius: 10vh;" id="skills">
+            <section class="skills section" style="background: linear-gradient( rgb(0, 195, 255), black);  transform: rotate(0deg);  border-bottom-right-radius: 10vh;" id="skills">
                 <h2 class="section-title" style="color: rgba(255, 255, 255, 0.928);">Skills</h2>
 
                 <div class="skills__container bd-grid">
@@ -136,7 +136,7 @@
                         <span class="skills__name">MongoDB</span>
                     </div>
 
-                    <div class="skills__img" >
+                    <div class="skills__img left_img" >
                         <img src="assets/img/home.left.jpeg" style="  left: 10vh;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" alt="">
                     </div>
                 </div>
@@ -219,7 +219,7 @@
 
 			
             <!--===== CONTACT =====-->
-            <section class="contact section" style="background: linear-gradient(150deg, rgb(255, 254, 254), rgb(0, 195, 255) ) ;" id="contact">
+            <section class="contact section" style="background: linear-gradient(0deg, rgb(255, 254, 254), rgb(0, 195, 255) ) ;  border-bottom-left-radius: 10vh; border-bottom-right-radius: 10vh;" id="contact">
                 <h2 class="section-title">Contact</h2>
 
                 <div class="contact__container bd-grid">
@@ -236,13 +236,13 @@
 
                     <form action="" class="contact__form">
                         <div class="contact__inputs">
-                            <input type="text" placeholder="Name" class="contact__input">
-                            <input type="mail" placeholder="Email" class="contact__input">
+                            <input type="text" placeholder="Name" class="contact__input flex_name">
+                            <input type="mail" placeholder="Email" class="contact__input flex_mail">
                         </div>
 
-                        <textarea name="" id="" cols="0" rows="10" placeholder="Don't forget to copy this text in case the redirection fails." class="contact__input"></textarea>
+                        <textarea name="" id="" cols="0" rows="10" placeholder="Don't forget to copy this text in case the redirection fails." class="contact__input flex_message"></textarea>
 
-                        <div><a href="https://t.me/wmbolles"><input  value="Send" class="contact__button"></a></div>
+                        <div><a href="https://t.me/wmbolles"><input  value="Send" class="contact__button flex_send"></a></div>
                     </form>
                 </div>
             </section>
@@ -280,7 +280,7 @@
 						<li><a href="../Gallery/intro" class="footer__link">Gallery</a></li>
 						<li><a href="../game/" class="footer__link">game</a></li>
                         <li><a href="../news/" class="footer__link">News</a></li>
-                        <li><a href="../bash/" class="footer__link">Bash</a></li>
+                        <li><a href="../bash/" class="footer__link">CLI</a></li>
                         <!-- <li><a href="../go/" class="footer__link">go</a></li> -->
                         <!-- <li><a href="../wallet/" class="footer__link">wallet</a></li> -->
                     </ul>
@@ -383,6 +383,32 @@ document.onkeydown = function(e) {
 			max: 20,
 			speed: 3000
 		});
+
+
+		VanillaTilt.init(document.querySelector(".flex_name"), {
+			max: 20,
+			speed: 3000
+		});
+		VanillaTilt.init(document.querySelector(".flex_mail"), {
+			max: 20,
+			speed: 3000
+		});
+		VanillaTilt.init(document.querySelector(".flex_message"), {
+			max: 20,
+			speed: 3000
+		});
+		VanillaTilt.init(document.querySelector(".flex_send"), {
+			max: 20,
+			speed: 3000
+		});
+
+		//images flex
+
+		VanillaTilt.init(document.querySelector(".left_img"), {
+			max: 2,
+			speed: 3000
+		});
+
 		// VanillaTilt.init(document.querySelector(".flexicalc-container"), {
 		// 	max: 5,
 		// 	speed: 4000
