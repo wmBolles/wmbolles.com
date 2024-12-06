@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta name="description" content="Bolles Wassim, an IT architect student at 1337 School. Web developer passionate about low-level programming, cybersecurity, physics, and an inventor and investor.">
+		<meta name="keywords" content="Bolles Wassim, IT architect, web developer, cybersecurity, low-level programming, inventor, 42 Network student, 1337 school">
+		<meta name="author" content="Wassim Bolles">
+		<meta name="robots" content="index, follow">
+		<link rel="canonical" href="https://wmbolles.com/">
+		<meta property="og:title" content="Bolles Wassim TheF - IT Architect & Web Developer">	
+		<meta property="og:description" content="Student at 42 Network, passionate about low-level programming, cybersecurity, physics, and an inventor and investor.">
+		<meta property="og:url" content="https://wmbolles.com/">
+		<meta property="og:image" content="https://wmbolles.com/home/assets/img/img2.png">
+	<meta name="description" content="WASSIM BOLLES wassim bolles wmbolles">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="rgb(242 242 242)">
+    <meta name="theme-color" content="rgb(17 17 17)">
+	<link rel="icon" type="image/x-icon" href="./assets/logo/wm.png">
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="./assets/bigBang.js"></script>
+    <title>Wassim Bolles</title>
+    <meta property="og:title" content="Wassim Bolles">
+    <meta property="og:title" content="WAASSIM BOLLES">
+    <meta name="description" content="WASSIM BOLLES wassim bolles wmbolles">
+    <meta property="og:description" content="Wassim bolles">
+    <meta property="og:image" content="https://scontent.fcmn1-3.fna.fbcdn.net/v/t39.30808-6/408049471_1781674012272313_6071001480103352144_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=2nj74q6IjuEQ7kNvgGFFNfp&_nc_ht=scontent.fcmn1-3.fna&oh=00_AfA76Biw6_I5JiLTor5VOJlLGAKw3-1afp95BdolEAkSfA&oe=6630B1AF">
+    <meta property="og:url" content="https://example.com">
+    <meta property="og:type" content="wmbolles.com">
+    <meta name="twitter:card" content="Profile image">
+    <meta name="twitter:title" content="Wassim Bolles">
+    <meta name="twitter:description" content="Wassim Bolles Profile">
+    <meta name="twitter:image" content="https://scontent.fcmn1-3.fna.fbcdn.net/v/t39.30808-6/408049471_1781674012272313_6071001480103352144_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=5f2048&_nc_ohc=2nj74q6IjuEQ7kNvgGFFNfp&_nc_ht=scontent.fcmn1-3.fna&oh=00_AfA76Biw6_I5JiLTor5VOJlLGAKw3-1afp95BdolEAkSfA&oe=6630B1AF">
+    <title>wmbolles</title>
+</head>
+<body data-theme="light">
+    <canvas id="bigbang"></canvas>
+	<script id="shader-fs" type="x-shader/x-fragment">
+		#ifdef GL_ES
+		precision highp float;
+		#endif
+		void main(void) {
+			gl_FragColor = vec4(0.2, 0.3, 0.4, 1.0);
+		}
+	</script>
+	<script id="shader-vs" type="x-shader/x-vertex">
+		attribute vec3 vertexPosition;
+
+		uniform mat4 modelViewMatrix;
+		uniform mat4 perspectiveMatrix;
+
+		void main(void) {
+			gl_Position = perspectiveMatrix * modelViewMatrix * vec4(  vertexPosition, 1.0);
+		}
+    </script>
+
+    <!-- <section class="home">
+        <div>
+            <h1></h1><span class="second-title">wmbolles.com</span>
+            <p>Welcome<span>enjoy !</span></p>
+        </div>
+    </section> -->
+    
+    <script src="assets/app.js"></script>
+</body>
+<style>
+	body{
+		background-color: black;
+	}
+</style>
+<script type="text/javascript">
+
+
+	function openPage2() {
+		window.location.href = './home/';
+	}
+	setTimeout(openPage2, 2200);
+
+document.addEventListener('contextmenu', event => event.preventDefault());
+document.onkeydown = function(e) {
+    if(e.key === "F12" || (e.ctrlKey && e.shiftKey && e.key === "I")) {
+        return false;
+    }
+};
+
+
+  (function () {
+  
+        const link = document.querySelectorAll('.container');
+        const cursor = document.querySelector('.cursor');
+  
+        const animateit = function (e) {
+              const span = this.querySelector('span');
+              const { offsetX: x, offsetY: y } = e,
+              { offsetWidth: width, offsetHeight: height } = this,
+              move = 45,
+              xMove = x / width * (move * 2) - move,
+              yMove = y / height * (move * 2) - move;
+              span.style.transform = `translate(${xMove}px, ${yMove}px)`;
+              if (e.type === 'mouseleave') span.style.transform = '';
+        };
+  
+        const editCursor = e => {
+              const { clientX: x, clientY: y } = e;
+              cursor.style.left = x + 'px';
+              cursor.style.top = y + 'px';
+        };
+  
+        link.forEach(b => b.addEventListener('mousemove', animateit));
+        link.forEach(b => b.addEventListener('mouseleave', animateit));
+        window.addEventListener('mousemove', editCursor);
+  
+  })();</script>
+
+
+</script>
+
+<script type="application/ld+json">
+	{
+	  "@context": "http://schema.org",
+	  "@type": "Person",
+	  "name": "Bolles Wassim",
+	  "jobTitle": "IT Architect & Web Developer",
+	  "alumniOf": "1337 School",
+	  "sameAs": [
+		"https://wmbolles.com",
+		"https://ma.linkedin.com/in/wassim-bolles-60a47523a",
+		"https://github.com/wmbolles"
+	  ],
+	  "description": "Student at 42 Network, passionate about low-level programming, cybersecurity, physics. Inventor and investor."
+	}
+	</script>
+	
+</html>
